@@ -1,7 +1,7 @@
 /* 
 Gugudan gugudan = new Gugudan();
-gugudan.printGugu(10);  //1´ÜºÎÅÍ 10´Ü±îÁö Ãâ·Â
-gugudan.printGugu(n);  //1´ÜºÎÅÍ n´Ü±îÁö Ãâ·Â
+gugudan.printGugu(10);  //1ë‹¨ë¶€í„° 10ë‹¨ê¹Œì§€ ì¶œë ¥
+gugudan.printGugu(n);  //1ë‹¨ë¶€í„° në‹¨ê¹Œì§€ ì¶œë ¥
 */
 public class Gugudan {
 	int num;
@@ -14,13 +14,12 @@ public class Gugudan {
 		this.num = num;
 	}
 	
-	public int printGugu() {
+	public void printGugu(int num) {
 		for(int i = 1; i<=num; i++) {
 			for(int j = 1; j <10; j++) {
 				System.out.println(i + " x " + j + " = " + (i * j));
 			}	
 		}
-		return num;
 		
 	}
 }
