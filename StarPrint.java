@@ -10,24 +10,23 @@ public class StarPrint {
 		this.num = num;
 	}
 	
-	public int printTriangle() {
+	public void printTriangle(int num) {
 		for(int i = 1; i <=num; i++) {
 			for(int j = 1; j <=i; j++) {
 				System.out.print("*");
 			}
 			System.out.println();	
 			}
-		return num;
 	}
 		
-	public int printReverseTriangle() {
+	public void printReverseTriangle(int num) {
 		for(int i = num; i > 0; i--) {
 			for(int j = 1; j <=i; j++) {
 				System.out.print("*");
 			}
 			System.out.println();	
 		}
-		return num;
+		
 	}
 					
 }
