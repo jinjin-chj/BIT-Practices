@@ -1,19 +1,8 @@
+package com.bat;
 
 public class Circle {
-
-	double rad;	//  Alt + Shift + S -> R 누르면 게터세터 함수
+	public Circle() {	//생성자
+		System.out.println("A사가 만든 서클");
 		
-	public double getRadious() {		//getter.setter함수
-		return rad;
 	}
-		
-	public void setRadious(int rad) {
-		this.rad = rad;
-	}
-		
-	public double getArea() {
-		final double PI = 3.14;
-		return rad * rad * PI;
-	} 
-
 }

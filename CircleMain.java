@@ -2,15 +2,16 @@
 public class CircleMain {
 
 	public static void main(String[] args) {
-		Circle cir = new Circle();
-		cir.setRadious(5);
-		
-		double area = cir.getArea();
-		System.out.println("¿ø ³ÐÀÌ: " + area);
-		
-		//System.out.println("¿ø ³ÐÀÌ: " + cir.getArea());
-		
+
+		Circle c = new Circle(1.5);
+		System.out.println(c.getArea());
+
+		c.setRad(2.5);
+		System.out.println(c.getArea());
+		c.setRad(-3.3);
+		System.out.println(c.getArea());
+		c.rad = -4.5;
+		System.out.println(c.getArea());
 	}
 
 }
-
