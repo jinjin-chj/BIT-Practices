@@ -1,26 +1,47 @@
-package Fri;
-
 class Buyer {
 	int money = 1000;
-	Product[] cart = new Product[3];	// ±¸ÀÔÇÑ Á¦Ç° ÀúÀåÇÏ´Â ¹è¿­
-	int i =0;	// ¹è¿­¿¡¼­ »ç¿ëÇÒ ÀÎµ¦½º
+	Product[] cart = new Product[3];	// êµ¬ì…í•œ ì œí’ˆ ì €ì¥í•˜ëŠ” ë°°ì—´
+	int i =0;	// ë°°ì—´ì—ì„œ ì‚¬ìš©í•  ì¸ë±ìŠ¤
 	
-	void buy(Product p) {	// ¾ê´Â µ· °ü·Ã ÀÏÀ» ÇÔ
+	void buy(Product p) {	// ì–˜ëŠ” ëˆ ê´€ë ¨ ì¼ì„ í•¨
+		if(money< p.price) {
+			System.out.println("ì”ì•¡ ë¶€ì¡±");
+			return;
+		} else (money >= p.price) {
+			money -= p.price;
+			add(p);
+		}
 		
 	}
-	void add(Product p) {	// ¾ê´Â Àå¹Ù±¸´Ï¿¡ ´ã´Â ÀÏÀ» ÇÔ
+	void add(Product p) {	// ì–˜ëŠ” ì¥ë°”êµ¬ë‹ˆì— ë‹´ëŠ” ì¼ì„ í•¨
+		if( i >= cart) {
+			Product[] newCart = new Product[cart.length *2];
+			// ìƒˆë¡œìš´ ë°°ì—´ ë³µì‚¬ ëª¨ë¥´ê² ìŒ
+			
+		}
+		cart = newCart;	//ë‰´ì¹´íŠ¸ë¡œ ì´ˆê¸°í™”
 		
+		cart[i] = p.product;
+		i++;
 	}
 	
 	
-	void summary() { 	// ¿µ¼öÁõÀÌ¶ó°í »ı°¢ÇÔ.
-		System.out.println("±¸ÀÔÇÑ ¹°°Ç: "+ "addÇÔ¼ö ÀÌ¿ë ±¸¸ÅÇÑ ¹°Ç° ¹è¿­ Ãâ·ÂÇÏ±â" );
-		System.out.println("»ç¿ëÇÑ ±İ¾×: " + "Àå¹Ù±¸´Ï ¹è¿­¿¡ ÀÖ´Â ¹°Ç°µéÀÇ °¡°İÀÇ ÇÕ");
-		System.out.println("³²Àº ±İ¾×: " + "Ã³À½ 1000¿¡¼­ »ç¿ë ±İ¾× »©±â");
+	void summary() { 	// ì˜ìˆ˜ì¦ì´ë¼ê³  ìƒê°í•¨.
+		int sum = 0;	//ì´ˆê¸°í™”
+	
+		System.out.print("êµ¬ì…í•œ ë¬¼ê±´: ");
+		for(int i =0; i< cart.length; i++) {
+			System.out.println(cart[i] + ", ");
+		}
+		sum += cart.price;
+		
+		System.out.print("ì‚¬ìš©í•œ ê¸ˆì•¡: " + sum);
+		
+		System.out.println("ë‚¨ì€ ê¸ˆì•¡: " + );	//ë‚¨ì€ê¸ˆì•¡ ë­˜ë¡œ ë¶ˆëŸ¬ì˜¤ì§€ ??
 	}	
 }
 
-class Product {	// ¹°Ç°ÀÇ ºÎ¸ğ Å¬·¡½º
+class Product {	// ë¬¼í’ˆì˜ ë¶€ëª¨ í´ë˜ìŠ¤
 	int price;
 	Product(int price) {
 		this.price= price;
@@ -51,3 +72,21 @@ class Audio extends Product {
 	
 }
 
+// ë©”ì¸í´ë˜ìŠ¤
+public class BuyerMain {
+
+	public static void main(String[] args) {
+		Buyer b = new Buyer();
+		
+		b.buy(new Tv());		// ì´ë ‡ê²Œ ì¥ë°”êµ¬ë‹ˆì— ë‹´ì•„ë³´ê² ë‹¤ëŠ”ê±°ì§€.
+		b.buy(new Computer());
+		b.buy(new Tv());
+		b.buy(new Audio());
+		b.buy(new Computer());
+		b.buy(new Computer());
+		b.buy(new Computer());
+		
+		b.summary();
+	}
+
+}
