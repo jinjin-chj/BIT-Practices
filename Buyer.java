@@ -10,7 +10,7 @@ class Buyer {
 			System.out.println("잔액이 부족하여 " + p + "를 살 수 없습니다.");
 			return;
 		} else {
-			money -= p.price;
+			money -= p.price;	// 여기서부터 머니는 잔액이 적용됨
 			add(p);
 		}
 	}
@@ -19,26 +19,41 @@ class Buyer {
 		if (i >= cart.length) {
 			Product[] newCart = new Product[cart.length * 2];
 			System.arraycopy(cart, 0, newCart, 0, cart.length); 
-			// 새로운 배열 복사 arraycopy!!
+			// 기존 배열 복사 .arraycopy!!
 			cart = newCart; // 뉴카트로 초기화
 		}
+		
 		cart[i] = p;
-		i++;
+		i++;	// 또는 그냥 cart[i++] = p; 한 줄로 표현 가능(후위 연산!)
 	}
 
 	void summary() { // 영수증이라고 생각함.
+		
 		int sum = 0; // 초기화
-
+		
 		System.out.print("구입한 물건: ");
 		for (int i = 0; i < cart.length; i++) {
 			System.out.print(cart[i] + ", ");
 			sum += cart[i].price;
 		}
-
 		System.out.println();
-		System.out.println("사용한 금액: " + sum);
-
-		System.out.println("남은 금액: " + money);
+		System.out.println("사용한 금액: " + sum + "원");
+		System.out.println("남은 금액: " + money + "원"); 
+		
+		
+		/* 쌤 버전
+		String itemList = "";
+		
+		int sum = 0;
+		
+		for(Product product : cart) {
+			itemList += product.toString() + ", ";
+			sum += product.price;
+		}
+		System.out.println("구입한 물건: " + itemList);
+		System.out.println("사용한 금액: " + sum + "원");
+		System.out.println("남은 금액: " + money + "원");
+		*/
 	}
 }
 
@@ -54,31 +69,28 @@ class Tv extends Product {
 	Tv() {
 		super(100);
 	}
-
+	@Override
 	public String toString() {
 		return "Tv";
 	}
-
 }
 
 class Computer extends Product {
 	Computer() {
 		super(200);
 	}
-
+	@Override
 	public String toString() {
 		return "Computer";
 	}
-
 }
 
 class Audio extends Product {
 	Audio() {
 		super(50);
 	}
-
+	@Override
 	public String toString() {
 		return "Audio";
 	}
-
 }
