@@ -44,7 +44,7 @@ public class GugudanResult extends HttpServlet {
 		writer.println("<table border=1 width=150>");
 		writer.println("<tr>");
 		writer.println("<td align=center>");
-		writer.println(input+"´Ü");
+		writer.println(input+"ë‹¨");
 		writer.println("</td>");
 		writer.println("</tr>");
 		
@@ -57,8 +57,10 @@ public class GugudanResult extends HttpServlet {
 		}
 		
 		writer.println("</table>");
-		// µ¹¾Æ°¡±â ¹öÆ° °¡¿îµ¥ Á¤·Ä ¸øÇÔ. ´­·¯µµ ¾Æ¹« µ¿ÀÛ ¾øÀ½!
-		writer.println("<input type=button value=µ¹¾Æ°¡±â size=8 color=gray>");
+		// ëŒì•„ê°€ê¸° ë²„íŠ¼ ê°€ìš´ë° ì •ë ¬ ëª»í•¨.
+		writer.println("<form action=\"html_12_30/Gugudan.html\">");
+		writer.println("<input type=\"submit\" value=\"ëŒì•„ê°€ê¸°\" size=\"8\" color=\"gray\">");
+		writer.println("</form>");
 		writer.println("</body>");
 		writer.println("</html>");
 		
