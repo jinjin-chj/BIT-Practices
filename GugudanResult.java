@@ -59,7 +59,7 @@ public class GugudanResult extends HttpServlet {
 		writer.println("</table>");
 		// 돌아가기 버튼 가운데 정렬 못함.
 		writer.println("<form action=\"html_12_30/Gugudan.html\">");
-		writer.println("<input type=\"submit\" value=\"돌아가기\" size=\"8\" color=\"gray\">");
+		writer.println("<input type=submit value=돌아가기 size=8 color=gray>");
 		writer.println("</form>");
 		writer.println("</body>");
 		writer.println("</html>");
