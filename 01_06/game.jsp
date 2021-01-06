@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>GAME</title>
 <style>
 	body{
@@ -24,34 +24,35 @@
 	user = Integer.parseInt(request.getParameter("game"));
 	com = (random.nextInt(3)+1);
 	%>
-	<h2>´ç½ÅÀÌ ³½ °Í</h2>
+	<h2>ë‹¹ì‹ ì´ ë‚¸ ê²ƒ</h2>
 		<%
 		if(user==2) {
 			%>
 			<img src="https://image.shutterstock.com/image-vector/rock-hand-gesture-paper-scissors-260nw-580972717.jpg"/>
 			<%} else if(user==1) { %>
 			<img src="https://image.shutterstock.com/image-vector/scissors-hand-gesture-rock-paper-260nw-580972723.jpg"/>
-			<%} else %>
+			<%} else {%>
 			<img src="https://image.shutterstock.com/image-vector/paper-hand-gesture-rock-scissors-260nw-580972726.jpg"/>
-		
-		<h2>ÄÄÇ»ÅÍ°¡ ³½ °Í</h2>
+			<%} %>
+		<h2>ì»´í“¨í„°ê°€ ë‚¸ ê²ƒ</h2>
 		<%
 		if(com==2) {
 			%>
 			<img src="https://image.shutterstock.com/image-vector/rock-hand-gesture-paper-scissors-260nw-580972717.jpg"/>
 			<%} else if(com==1) { %>
 			<img src="https://image.shutterstock.com/image-vector/scissors-hand-gesture-rock-paper-260nw-580972723.jpg"/>
-			<%} else %>
+			<%} else {%>
 			<img src="https://image.shutterstock.com/image-vector/paper-hand-gesture-rock-scissors-260nw-580972726.jpg"/>
+			<%} %>
 	<hr/>
 		<%
 		if((com==1 && user==2)||(com==2 && user==3)||(com==3 && user==1)) { 
-			%> <h3>>> ´ç½ÅÀÌ ½Â¸®ÇÏ¿´½À´Ï´Ù.</h3> <%
+			%> <h3>>> ë‹¹ì‹ ì´ ìŠ¹ë¦¬í•˜ì˜€ìŠµë‹ˆë‹¤.</h3> <%
 		} else if(com==user){ %>
-			<h3>>> ºñ°å½À´Ï´Ù.</h3> <%
-		} else  %><h3>>> ´ç½ÅÀÌ Á³½À´Ï´Ù.</h3>
+			<h3>>> ë¹„ê²¼ìŠµë‹ˆë‹¤.</h3> <%
+		} else  %><h3>>> ë‹¹ì‹ ì´ ì¡ŒìŠµë‹ˆë‹¤.</h3>
 		<br/>
-		<h3><a href="game.html">´Ù½ÃÇÏ±â</a></h3>
+		<h3><a href="game.html">ë‹¤ì‹œí•˜ê¸°</a></h3>
 
 </body>
 </html>
