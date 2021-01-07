@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
 <title>GAME</title>
 <style>
 	body{
@@ -28,21 +28,21 @@
 		<%
 		if(user==2) {
 			%>
-			<img src="https://image.shutterstock.com/image-vector/rock-hand-gesture-paper-scissors-260nw-580972717.jpg"/>
+			<img src="sc.JPG"/>
 			<%} else if(user==1) { %>
-			<img src="https://image.shutterstock.com/image-vector/scissors-hand-gesture-rock-paper-260nw-580972723.jpg"/>
+			<img src="rock.JPG"/>
 			<%} else {%>
-			<img src="https://image.shutterstock.com/image-vector/paper-hand-gesture-rock-scissors-260nw-580972726.jpg"/>
+			<img src="pa.JPG"/>
 			<%} %>
 		<h2>컴퓨터가 낸 것</h2>
 		<%
 		if(com==2) {
 			%>
-			<img src="https://image.shutterstock.com/image-vector/rock-hand-gesture-paper-scissors-260nw-580972717.jpg"/>
+			<img src="sc.JPG"/>
 			<%} else if(com==1) { %>
-			<img src="https://image.shutterstock.com/image-vector/scissors-hand-gesture-rock-paper-260nw-580972723.jpg"/>
+			<img src="rock.JPG"/>
 			<%} else {%>
-			<img src="https://image.shutterstock.com/image-vector/paper-hand-gesture-rock-scissors-260nw-580972726.jpg"/>
+			<img src="pa.JPG"/>
 			<%} %>
 	<hr/>
 		<%
