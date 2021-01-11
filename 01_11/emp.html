@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- <<문제점>>
+입사일이 시간단위 까지 나옴
+null 값을 0으로 치환해야함
+mgr값이 사원번호로 나옴 -> 이름으로 변경해야함
+html에서 옵션값 DB에서 불러오기 -->
+	<form action="emp.jsp" method="post">
+		<h1>사원 정보 입력</h1> 
+		<hr/>
+			사원번호 <input type="text" name="empno"/><br/>
+			사원이름 <input type="text" name="ename"/><br/>
+			사원직급 <input type="text" name="job"/><br/>
+			매니저<select name="mgr">
+				<option value="" selected="selected"></option>
+				<option value="" ></option>
+				<option value=""></option>
+				<option value=""></option>
+			</select><br/>
+			입사일 <input type="text" name="hiredate"/><br/>
+			급여 <input type="text" name="sal"/><br/>
+			커미션 <input type="text" name="comm"/><br/>
+			부서<select name="dname">
+				<option value="" selected="selected"></option>
+				<option value="" ></option>
+				<option value=""></option>
+				<option value=""></option>
+			</select><br/>
+			<input type="submit" value="입력"/>
+	</form>
+</body>
+</html>
