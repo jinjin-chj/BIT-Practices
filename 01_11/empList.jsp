@@ -33,20 +33,20 @@ String query = "select * from emp, dept";%>
 	statement = connection.createStatement();
 	resultSet = statement.executeQuery(query);
 %>
-<h2>EMP Å×ÀÌºí Á÷¿ø ¸ñ·Ï</h2>
-<table border="1">
+<h2>EMP í…Œì´ë¸” ì§ì› ëª©ë¡</h2>
+	<table border="1">
 		<tr class="list">
-			<td>»ç¿ø¹øÈ£</td>
-			<td>»ç¿øÀÌ¸§</td>
-			<td>Á÷±Þ(¾÷¹«)</td>
-			<td>»ó»ç(ÀÌ¸§)</td>
-			<td>ÀÔ»çÀÏ</td>
-			<td>±Þ¿©</td>
-			<td>Ä¿¹Ì¼Ç</td>
-			<td>ºÎ¼­¹øÈ£</td>
-			<td>ºÎ¼­ÀÌ¸§</td>
-			<td>ºÎ¼­À§Ä¡</td>
-			<td>°ü¸®</td>
+			<td>ì‚¬ì›ë²ˆí˜¸</td>
+			<td>ì‚¬ì›ì´ë¦„</td>
+			<td>ì§ê¸‰(ì—…ë¬´)</td>
+			<td>ìƒì‚¬(ì´ë¦„)</td>
+			<td>ìž…ì‚¬ì¼</td>
+			<td>ê¸‰ì—¬</td>
+			<td>ì»¤ë¯¸ì…˜</td>
+			<td>ë¶€ì„œë²ˆí˜¸</td>
+			<td>ë¶€ì„œì´ë¦„</td>
+			<td>ë¶€ì„œìœ„ì¹˜</td>
+			<td>ê´€ë¦¬</td>
 		</tr>
 		<%
 			while (resultSet.next()) {
@@ -73,7 +73,7 @@ String query = "select * from emp, dept";%>
 			<td><%=deptno%></td>
 			<td><%=dname%></td>
 			<td><%=loc%></td>
-			<td><a href=#>¼öÁ¤</a></td>
+			<td><a href=#>ìˆ˜ì •</a></td>
 		</tr>
 		<%
 			}
