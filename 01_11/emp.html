@@ -5,33 +5,64 @@
 <title>Insert title here</title>
 </head>
 <body>
-<!-- <<¹®Á¦Á¡>>
-ÀÔ»çÀÏÀÌ ½Ã°£´ÜÀ§ ±îÁö ³ª¿È
-null °ªÀ» 0À¸·Î Ä¡È¯ÇØ¾ßÇÔ
-mgr°ªÀÌ »ç¿ø¹øÈ£·Î ³ª¿È -> ÀÌ¸§À¸·Î º¯°æÇØ¾ßÇÔ
-html¿¡¼­ ¿É¼Ç°ª DB¿¡¼­ ºÒ·¯¿À±â -->
-	<form action="emp.jsp" method="post">
-		<h1>»ç¿ø Á¤º¸ ÀÔ·Â</h1> 
+<!-- <<ë¬¸ì œì >>
+1. ìž…ì‚¬ì¼ì´ ì‹œê°„ë‹¨ìœ„ ê¹Œì§€ ë‚˜ì˜´
+2. null ê°’ì„ 0ìœ¼ë¡œ ì¹˜í™˜í•´ì•¼í•¨
+3. mgrê°’ì´ ì‚¬ì›ë²ˆí˜¸ë¡œ ë‚˜ì˜´ -> ì´ë¦„ìœ¼ë¡œ ë³€ê²½í•´ì•¼í•¨
+4. htmlì—ì„œ ì˜µì…˜ê°’ DBì—ì„œ ë¶ˆëŸ¬ì˜¤ê¸° 
+5. insert í™”ë©´ì—ì„œ if-elseë¡œ ì •ìƒìž…ë ¥/ì˜¤ë¥˜ ë‚˜ëˆ ì„œ ì¶œë ¥í•˜ê¸°
+-->
+	<form action="empInsert.jsp" method="post">
+		<h1>ì‚¬ì› ì •ë³´ ìž…ë ¥</h1> 
 		<hr/>
-			»ç¿ø¹øÈ£ <input type="text" name="empno"/><br/>
-			»ç¿øÀÌ¸§ <input type="text" name="ename"/><br/>
-			»ç¿øÁ÷±Þ <input type="text" name="job"/><br/>
-			¸Å´ÏÀú<select name="mgr">
-				<option value="" selected="selected"></option>
-				<option value="" ></option>
-				<option value=""></option>
-				<option value=""></option>
-			</select><br/>
-			ÀÔ»çÀÏ <input type="text" name="hiredate"/><br/>
-			±Þ¿© <input type="text" name="sal"/><br/>
-			Ä¿¹Ì¼Ç <input type="text" name="comm"/><br/>
-			ºÎ¼­<select name="dname">
-				<option value="" selected="selected"></option>
-				<option value="" ></option>
-				<option value=""></option>
-				<option value=""></option>
-			</select><br/>
-			<input type="submit" value="ÀÔ·Â"/>
+		<table>
+			<tr>
+				<td>ì‚¬ì›ë²ˆí˜¸</td> 
+				<td><input type="number" name="empno"/></td>
+			</tr> 
+			<tr>
+				<td>ì‚¬ì›ì´ë¦„</td>  
+				<td><input type="text" name="ename"/></td> 
+			</tr>
+			<tr>
+				<td>ì‚¬ì›ì§ê¸‰</td> 
+				<td><input type="text" name="job"/><td>
+			</tr>
+			<tr>
+				<td>ë§¤ë‹ˆì €</td> 
+				<td><select name="mgr">
+					<option value="" selected="selected"></option>
+					<option value="" ></option>
+					<option value=""></option>
+					<option value=""></option>
+					</select></td>
+			</tr>
+			<tr>
+				<td>ìž…ì‚¬ì¼</td> 
+				<td><input type="text" name="hiredate"/></td>
+			</tr>
+			<tr>
+				<td>ê¸‰ì—¬</td> 
+				<td><input type="number" name="sal"/></td>
+			</tr>
+			<tr>
+				<td>ì»¤ë¯¸ì…˜</td> 
+				<td><input type="number" name="comm"/></td>
+			</tr>
+			<tr>
+				<td>ë¶€ì„œ</td> 
+				<td><select name="dname">
+					<option value="" selected="selected"></option>
+					<option value="" ></option>
+					<option value=""></option>
+					<option value=""></option>
+			</select></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align:center">
+				<input type="submit" value="ìž…ë ¥"/>
+			</tr>
+		</table>
 	</form>
 </body>
 </html>
